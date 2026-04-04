@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-DIR="$HOME/Screenshots"
+DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$DIR"
 
 FILE="$DIR/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
