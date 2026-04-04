@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 #
 DIR="$HOME/Screenshots"
 mkdir -p "$DIR"
@@ -7,4 +7,4 @@ FILE="$DIR/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
 
 grim -g "$(slurp)" - | tee "$FILE" | wl-copy
 
-# notify-send "Screenshot Captured" "Saved to $FILE" -i camera-photo
+notify-send "Screenshot Captured" "Saved to $FILE" -i $HOME/.config/mango/scripts/screenshot.png
