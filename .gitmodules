@@ -1,0 +1,3 @@
+[submodule "etc/skel/.config/DankMaterialShell/plugins/catWidget"]
+	path = etc/skel/.config/DankMaterialShell/plugins/catWidget
+	url = https://github.com/xi-ve/cat-dms
