@@ -100,17 +100,11 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
         show_login_button = true
         show_password_hint = true
 
-[plugin_settings."leo/game-launcher"]
-browser_placement = "attached"
-
 [plugin_settings."noctalia/screen_recorder"]
 restore_portal = true
 
-[plugin_settings."yogaeru/mango_layout"]
-main_placement = "attached"
-
 [plugins]
-enabled = [ "noctalia/screen_recorder", "leo/game-launcher", "yogaeru/mango_layout", "noctalia/wallhaven" ]
+enabled = [ "noctalia/screen_recorder", "noctalia/wallhaven" ]
 
     [[plugins.source]]
     kind = "git"
@@ -121,16 +115,6 @@ enabled = [ "noctalia/screen_recorder", "leo/game-launcher", "yogaeru/mango_layo
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
-
-    [[plugins.source]]
-    kind = "git"
-    location = "https://github.com/Ahmed5Emad/Gamelauncher-Noctalia"
-    name = "game-launcher"
-
-    [[plugins.source]]
-    kind = "git"
-    location = "https://github.com/yogaeru/noctalia-plugins"
-    name = "yogaeru"
 
 [shell]
 polkit_agent = true
@@ -164,14 +148,8 @@ format = "{:%a %d %b -}"
 custom_image = "/usr/share/noctalia/assets/images/distros/cachy.svg"
 scale = 1.45
 
-[widget.launcher_2]
-type = "leo/game-launcher:launcher"
-
 [widget.network]
 show_label = false
-
-[widget.picker]
-type = "yogaeru/mango_layout:picker"
 
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
