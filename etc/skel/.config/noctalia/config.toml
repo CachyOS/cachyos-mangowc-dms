@@ -1,6 +1,6 @@
 [bar.default]
 background_opacity = 0.89999997988343239
-center = [ "workspaces", "Spacer_2", "media" ]
+center = [ "workspaces", "Spacer_2", "media", "Spacer_2", "cat" ]
 end = [
     "tray",
     "Spacer_2",
@@ -22,8 +22,8 @@ end = [
 ]
 margin_edge = 0
 margin_ends = 0
-radius_bottom_left = -30
-radius_bottom_right = -30
+radius_bottom_left = 0
+radius_bottom_right = 0
 radius_top_left = 0
 radius_top_right = 0
 start = [ "Spacer", "launcher", "Spacer_2", "active_window" ]
@@ -35,20 +35,21 @@ path = "/usr/share/wallpapers/cachyos-wallpapers/cachysurf4.jpg"
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
+    [idle.behavior.Screen-off]
+    action = "command"
+    enabled = true
+    timeout = 300.0
+
     [idle.behavior.lock]
     action = "lock"
     enabled = true
     timeout = 600.0
 
     [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
+    action = "suspend"
     enabled = true
+    lock_before_suspend = false
     timeout = 900.0
-
-    [idle.behavior.screen-off]
-    action = "screen_off"
-    enabled = true
-    timeout = 660.0
 
 [lockscreen_widgets]
 enabled = false
@@ -101,10 +102,10 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
         show_password_hint = true
 
 [plugin_settings."noctalia/screen_recorder"]
-restore_portal = true
+restore_portal = false
 
 [plugins]
-enabled = [ "noctalia/screen_recorder", "noctalia/wallhaven" ]
+enabled = [ "noctalia/screen_recorder", "dotnetrob/cat", "noctalia/wallhaven" ]
 
     [[plugins.source]]
     kind = "git"
@@ -128,12 +129,6 @@ source = "wallpaper"
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
 
-[theme]
-builtin = "Noctalia"
-mode = "dark"
-source = "wallpaper"
-wallpaper_scheme = "m3-content"
-
 [widget.Spacer]
 length = 10
 type = "spacer"
@@ -141,11 +136,15 @@ type = "spacer"
 [widget.Spacer_2]
 type = "spacer"
 
+[widget.cat]
+cat_size = 34
+type = "dotnetrob/cat:cat"
+
 [widget.date]
 format = "{:%a %d %b -}"
 
 [widget.launcher]
-custom_image = "/usr/share/noctalia/assets/images/distros/cachy.svg"
+custom_image = "/usr/share/icons/hicolor/scalable/apps/org.cachyos.hello.svg"
 scale = 1.45
 
 [widget.network]
