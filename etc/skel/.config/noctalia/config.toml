@@ -105,7 +105,7 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
 restore_portal = false
 
 [plugins]
-enabled = [ "noctalia/screen_recorder", "dotnetrob/cat", "noctalia/wallhaven" ]
+enabled = [ "noctalia/screen_recorder", "dotnetrob/cat", "noctalia/wallhaven", "ezequiel/mango_layouts", "kenn/keybind-cheatsheet" ]
 
     [[plugins.source]]
     kind = "git"
